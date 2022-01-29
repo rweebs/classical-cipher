@@ -53,7 +53,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="normal">
      <widget class="QLabel" name="text_label">
@@ -338,42 +338,6 @@ color:#0C145A;</string>
        <string>Decrypt</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="five_input">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>290</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font-family: Roboto;
-font-style: normal;
-color:#0C145A;</string>
-      </property>
-      <property name="text">
-       <string>Seperated every 5 character</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="space_input">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>260</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font-family: Roboto;
-font-style: normal;
-color:#0C145A;</string>
-      </property>
-      <property name="text">
-       <string>Without Space</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="print_label">
       <property name="geometry">
        <rect>
@@ -517,6 +481,52 @@ line-height: 16px;</string>
         <height>161</height>
        </rect>
       </property>
+     </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>250</y>
+        <width>241</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="five_input">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>271</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-family: Roboto;
+font-style: normal;
+color:#0C145A;</string>
+       </property>
+       <property name="text">
+        <string>Seperated every 5 character</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="space_input">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>271</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-family: Roboto;
+font-style: normal;
+color:#0C145A;</string>
+       </property>
+       <property name="text">
+        <string>Without Space</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="sign_in">
