@@ -49,11 +49,11 @@
       <x>380</x>
       <y>20</y>
       <width>501</width>
-      <height>551</height>
+      <height>661</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="normal">
      <widget class="QLabel" name="text_label">
@@ -137,7 +137,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>510</y>
+        <y>590</y>
         <width>221</width>
         <height>31</height>
        </rect>
@@ -213,7 +213,7 @@ box-sizing: border-box;
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>150</y>
+        <y>160</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -245,7 +245,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>150</y>
+        <y>160</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -277,7 +277,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>190</y>
+        <y>200</y>
         <width>121</width>
         <height>31</height>
        </rect>
@@ -306,7 +306,7 @@ line-height: 16px;</string>
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>190</y>
+        <y>200</y>
         <width>271</width>
         <height>20</height>
        </rect>
@@ -324,7 +324,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>210</y>
+        <y>230</y>
         <width>271</width>
         <height>20</height>
        </rect>
@@ -342,7 +342,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>260</y>
+        <y>290</y>
         <width>271</width>
         <height>20</height>
        </rect>
@@ -360,7 +360,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>240</y>
+        <y>260</y>
         <width>271</width>
         <height>20</height>
        </rect>
@@ -378,7 +378,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>240</y>
+        <y>260</y>
         <width>121</width>
         <height>41</height>
        </rect>
@@ -413,7 +413,7 @@ line-height: 16px;</string>
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>470</y>
+        <y>540</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -445,7 +445,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>470</y>
+        <y>540</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -477,7 +477,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>290</y>
+        <y>320</y>
         <width>121</width>
         <height>41</height>
        </rect>
@@ -512,9 +512,9 @@ line-height: 16px;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>330</y>
+        <y>360</y>
         <width>421</width>
-        <height>121</height>
+        <height>161</height>
        </rect>
       </property>
      </widget>
@@ -559,10 +559,10 @@ color:#0C145A;</string>
      <widget class="QSlider" name="rotor_1">
       <property name="geometry">
        <rect>
-        <x>160</x>
+        <x>170</x>
         <y>50</y>
         <width>22</width>
-        <height>121</height>
+        <height>131</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -587,10 +587,10 @@ color:#0C145A;</string>
      <widget class="QSlider" name="rotor_2">
       <property name="geometry">
        <rect>
-        <x>230</x>
+        <x>240</x>
         <y>50</y>
         <width>22</width>
-        <height>121</height>
+        <height>131</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -615,10 +615,10 @@ color:#0C145A;</string>
      <widget class="QSlider" name="rotor_3">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>310</x>
         <y>50</y>
         <width>22</width>
-        <height>121</height>
+        <height>131</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -644,7 +644,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>180</y>
+        <y>210</y>
         <width>121</width>
         <height>21</height>
        </rect>
@@ -672,8 +672,8 @@ line-height: 16px;</string>
      <widget class="QLabel" name="rotor_1_label">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>180</y>
+        <x>170</x>
+        <y>190</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -704,8 +704,8 @@ line-height: 16px;</string>
      <widget class="QLabel" name="rotor_2_label">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>180</y>
+        <x>240</x>
+        <y>190</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -736,8 +736,8 @@ line-height: 16px;</string>
      <widget class="QLabel" name="rotor_3_label">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>180</y>
+        <x>310</x>
+        <y>190</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -769,7 +769,7 @@ line-height: 16px;</string>
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>250</y>
+        <y>280</y>
         <width>291</width>
         <height>31</height>
        </rect>
@@ -784,7 +784,7 @@ box-sizing: border-box;
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>290</y>
+        <y>330</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -816,7 +816,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>290</y>
+        <y>330</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -848,7 +848,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>210</y>
+        <y>240</y>
         <width>121</width>
         <height>31</height>
        </rect>
@@ -877,7 +877,7 @@ line-height: 16px;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>250</y>
+        <y>280</y>
         <width>121</width>
         <height>31</height>
        </rect>
@@ -906,7 +906,7 @@ line-height: 16px;</string>
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>210</y>
+        <y>240</y>
         <width>291</width>
         <height>31</height>
        </rect>
@@ -921,7 +921,7 @@ box-sizing: border-box;
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>470</y>
+        <y>540</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -953,7 +953,7 @@ color:#0C145A;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>290</y>
+        <y>340</y>
         <width>121</width>
         <height>41</height>
        </rect>
@@ -988,9 +988,9 @@ line-height: 16px;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>330</y>
+        <y>380</y>
         <width>421</width>
-        <height>121</height>
+        <height>141</height>
        </rect>
       </property>
      </widget>
@@ -998,7 +998,7 @@ line-height: 16px;</string>
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>510</y>
+        <y>590</y>
         <width>221</width>
         <height>31</height>
        </rect>
@@ -1030,7 +1030,7 @@ color:rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>470</y>
+        <y>540</y>
         <width>111</width>
         <height>21</height>
        </rect>
