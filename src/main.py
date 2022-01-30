@@ -9,6 +9,7 @@
 
 import ciphers.vigenere_standard as vigenere_standard
 import ciphers.vigenere_extended as vigenere_extended
+import ciphers.one_time_pad as otp
 import ciphers.playfair as playfair
 import helpers.lib as lib
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -636,6 +637,24 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color:rgb(255, 255, 255);")
                 self.register_button_7.setObjectName("register_button_7")
+                self.register_button_8 = QtWidgets.QPushButton(self.centralwidget)
+                self.register_button_8.setGeometry(QtCore.QRect(80, 510, 221, 31))
+                font = QtGui.QFont()
+                
+                
+                font.setBold(True)
+                font.setItalic(False)
+                font.setWeight(62)
+                self.register_button_8.setFont(font)
+                self.register_button_8.setStyleSheet(
+"font-style: normal;\n"
+"font-weight: 500;\n"
+"font-size: 14px;\n"
+"line-height: 16px;\n"
+"background: #4D17E2;\n"
+"border-radius: 10px;\n"
+"color:rgb(255, 255, 255);")
+                self.register_button_8.setObjectName("register_button_7")
                 MainWindow.setCentralWidget(self.centralwidget)
 
                 #COPY
@@ -650,6 +669,8 @@ class Ui_MainWindow(object):
                 self.register_button_6.clicked.connect(self.click3)
 
                 self.register_button_7.clicked.connect(self.click4)
+
+                self.register_button_8.clicked.connect(self.click5)
 
                 #Encrypt Decrypt
 
@@ -738,6 +759,7 @@ class Ui_MainWindow(object):
                 self.register_button_5.setText(_translate("MainWindow", "Extended Vigenere Cipher"))
                 self.register_button_6.setText(_translate("MainWindow", "Playfair Cipher"))
                 self.register_button_7.setText(_translate("MainWindow", "Enigma Cipher"))
+                self.register_button_8.setText(_translate("MainWindow", "One Time Pad"))
         
         def show_succ(self, succ):
                 msg = QtWidgets.QMessageBox()
@@ -793,6 +815,14 @@ class Ui_MainWindow(object):
                         "background: #4D17E2;\n"
                         "border-radius: 10px;\n"
                         "color:rgb(255, 255, 255);")
+                self.register_button_8.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #4D17E2;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(255, 255, 255);")
 
         def click2(self):
                 self.title.setText("Extended Vigenere Cipher")
@@ -822,7 +852,15 @@ class Ui_MainWindow(object):
                         "background: #4D17E2;\n"
                         "border-radius: 10px;\n"
                         "color:rgb(255, 255, 255);")
-                self.register_button_7.setStyleSheet(
+                self.register_button_8.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #4D17E2;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(255, 255, 255);")
+                self.register_button_5.setStyleSheet(
                         "font-style: normal;\n"
                         "font-weight: 500;\n"
                         "font-size: 14px;\n"
@@ -867,6 +905,14 @@ class Ui_MainWindow(object):
                         "background: #4D17E2;\n"
                         "border-radius: 10px;\n"
                         "color:rgb(255, 255, 255);")
+                self.register_button_8.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #4D17E2;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(255, 255, 255);")
 
         def click4(self):
                 self.kind=3
@@ -902,9 +948,62 @@ class Ui_MainWindow(object):
                         "background: #4D17E2;\n"
                         "border-radius: 10px;\n"
                         "color:rgb(255, 255, 255);")
+                self.register_button_8.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #4D17E2;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(255, 255, 255);")
                 
                 self.stackedWidget.setCurrentIndex(1)
-        
+
+        def click5(self):
+                self.title.setText("One Time Pad")
+                self.stackedWidget.setCurrentIndex(0)
+                self.kind=4
+                self.register_button_8.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #E7EAF5;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(0, 0, 0);")
+                self.register_button_4.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #4D17E2;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(255, 255, 255);")
+                self.register_button_5.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #4D17E2;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(255, 255, 255);")
+                self.register_button_7.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #4D17E2;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(255, 255, 255);")
+                self.register_button_7.setStyleSheet(
+                        "font-style: normal;\n"
+                        "font-weight: 500;\n"
+                        "font-size: 14px;\n"
+                        "line-height: 16px;\n"
+                        "background: #4D17E2;\n"
+                        "border-radius: 10px;\n"
+                        "color:rgb(255, 255, 255);")
+
         def setEncryptNormal(self):
                 self.mode_normal = 0
         
@@ -1028,6 +1127,20 @@ class Ui_MainWindow(object):
                                         result = playfair.encrypt(lib.remove_non_alphabet(message).upper(), lib.remove_non_alphabet(key).upper())
                                 else:
                                         result = playfair.decrypt(lib.remove_non_alphabet(message).upper(),lib.remove_non_alphabet(key).upper())
+                elif (self.kind==4):
+                        if (len(self.key_input.text()) > len(self.text_input.text())):
+                                self.key_input.setText("Invalid Key")
+                        else:
+                                message = self.text_input.text()
+                                key = self.key_input.text()
+                                if (self.mode_normal == 0):
+                                        encrypted = otp.encrypt(lib.remove_non_alphabet(message).upper())
+                                        result = encrypted[0]
+                                        self.key_input.setText(encrypted[1])
+                                else:
+                                        result = vigenere_standard.decrypt(lib.remove_non_alphabet(message).upper(),lib.remove_non_alphabet(key).upper())
+
+
                 if ((self.print_type == 1) and  (self.kind != 1)):
                         result = lib.add_space_every_n_chars(result,5)
                 self.plainTextEdit.setText(result)

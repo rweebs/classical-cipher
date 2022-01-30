@@ -1,5 +1,3 @@
-import io
-
 def encrypt(input_bytes, key):
     result = ""
     for i in range(len(input_bytes)):
