@@ -19,3 +19,10 @@ def generate_vigenere_key(plaintext,key):
     for i in range(length):
         result += key[(i % len(key))]
     return result
+
+def generate_vigenere_key_extended(plaintext,key):
+    length = len(plaintext)
+    result = ""
+    for i in range(length):
+        result += key[(i % len(key))]
+    return result

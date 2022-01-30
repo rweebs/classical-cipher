@@ -18,3 +18,12 @@ def add_space_every_n_chars(string, n):
 
 def remove_non_alphabet(string):
     return "".join([char for char in string if char.isalpha()])
+
+def string_to_ascii_array(string):
+    return [ord(x) for x in string]
+
+def ascii_to_string(ascii):
+    result=""
+    for x in ascii:
+        result+=chr(x)
+    return result
