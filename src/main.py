@@ -716,8 +716,6 @@ class Ui_MainWindow(object):
                 self.count_fast1=0
                 self.count_medium1=0
                 self.count_slow1=0
-                self.export_counter=0
-                self.export_rotors=[]
                 self.final_msg=[]
 
                 QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -852,7 +850,7 @@ class Ui_MainWindow(object):
                         "background: #4D17E2;\n"
                         "border-radius: 10px;\n"
                         "color:rgb(255, 255, 255);")
-                self.register_button_8.setStyleSheet(
+                self.register_button_7.setStyleSheet(
                         "font-style: normal;\n"
                         "font-weight: 500;\n"
                         "font-size: 14px;\n"
@@ -860,7 +858,7 @@ class Ui_MainWindow(object):
                         "background: #4D17E2;\n"
                         "border-radius: 10px;\n"
                         "color:rgb(255, 255, 255);")
-                self.register_button_5.setStyleSheet(
+                self.register_button_8.setStyleSheet(
                         "font-style: normal;\n"
                         "font-weight: 500;\n"
                         "font-size: 14px;\n"
@@ -1044,7 +1042,6 @@ class Ui_MainWindow(object):
 
         def save_file(self):
                 try:
-                        isFile=False
                         filename =QtWidgets.QFileDialog.getSaveFileName()[0]
                         if ((self.kind == 1) and (self.isFile)):
                                 file = open(filename,'wb')
@@ -1057,10 +1054,10 @@ class Ui_MainWindow(object):
                         self.plainTextEdit.setText("File Downloaded Successfully")
                 except:
                         self.plainTextEdit.setText("Download Canceled")
-
+                self.isFile=False
         def open_file(self):
                 try:
-                        self.isFile=True
+                        
                         self.filename = QtWidgets.QFileDialog.getOpenFileName()[0]
                         if (self.kind != 1):
                                 try:
@@ -1070,9 +1067,17 @@ class Ui_MainWindow(object):
                                 except:
                                         self.plainTextEdit.setText("Not a valid utf-8 text file")
                         else:
-                                with open(self.filename, 'rb') as f:
-                                                self.extended_vigenere_bytes=f.read()
+                                import os
+                                extension = os.path.splitext(self.filename)[1]
+                                if extension == ".txt":
+                                        with open(self.filename, 'rb') as f:
                                                 self.plainTextEdit.setText("File uploaded successfully please proceed to generate text")
+                                                self.text_input.setText(f.read().decode("utf-8"))
+                                else:
+                                        self.isFile=True
+                                        with open(self.filename, 'rb') as f:
+                                                        self.extended_vigenere_bytes=f.read()
+                                                        self.plainTextEdit.setText("File uploaded successfully please proceed to generate file")
                 except:
                         self.plainTextEdit.setText("Upload canceled")
 
@@ -1113,7 +1118,6 @@ class Ui_MainWindow(object):
                                 result="File generated successfully please proceed to download"
                         else:
                                 if (self.mode_normal == 0):
-                                        # result="".join(map(chr, bytes_data))
                                         result=lib.ascii_to_string(vigenere_extended.encrypt(bytearray(lib.string_to_ascii_array(message)),key))
                                 else:
                                         result=lib.ascii_to_string(vigenere_extended.decrypt(bytearray(lib.string_to_ascii_array(message)),key))
@@ -1294,7 +1298,7 @@ class Ui_MainWindow(object):
                         self.reverse=False
         def run_enigma(self):
                 self.rotor_setting(self.rotor_1.value() + 1,self.rotor_2.value() + 1,self.rotor_3.value() + 1)
-                self.export_rotors.append(self.alphabet_list[int(self.rotor_1.value())] + self.alphabet_list[int(self.rotor_2.value())] + self.alphabet_list[int(self.rotor_3.value())])
+                
                 omssg=lib.remove_non_alphabet(self.text_input_3.text().upper())
                 mssglst=list(omssg)
                 self.plugboard(mssglst)
