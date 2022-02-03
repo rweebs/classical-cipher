@@ -32,6 +32,9 @@ Other Cipher
 2. pip install -r requirements.txt
 3. python main.py or python3 main.py or py main.py
 
+## If you are working with windows you can also try my virtualize app
+1. Go to directory ./src from root directory
+2. open enigma.exe
 
 ## Note : PyQt5 is not supported for arm64 based processor
 ### Author

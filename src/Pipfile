@@ -11,4 +11,4 @@ PyQt5-sip = "==12.9.0"
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"
