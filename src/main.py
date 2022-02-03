@@ -1103,34 +1103,43 @@ class Ui_MainWindow(object):
                         else:
                                 message = self.text_input.text()
                                 key = self.key_input.text()
-                                if (self.mode_normal == 0):
-                                        result = vigenere_standard.encrypt(lib.remove_non_alphabet(message).upper(), lib.remove_non_alphabet(key).upper())
+                                if (key == "" or message == ""):
+                                        result = "Please enter a message and a key"
                                 else:
-                                        result = vigenere_standard.decrypt(lib.remove_non_alphabet(message).upper(),lib.remove_non_alphabet(key).upper())
+                                        if (self.mode_normal == 0):
+                                                result = vigenere_standard.encrypt(lib.remove_non_alphabet(message).upper(), lib.remove_non_alphabet(key).upper())
+                                        else:
+                                                result = vigenere_standard.decrypt(lib.remove_non_alphabet(message).upper(),lib.remove_non_alphabet(key).upper())
                 elif (self.kind == 1):
                         message = self.text_input.text()
                         key = self.key_input.text()
-                        if (self.isFile):
-                                if (self.mode_normal == 0):
-                                        self.output_file=vigenere_extended.encrypt(self.extended_vigenere_bytes,key)
-                                else:
-                                        self.output_file=vigenere_extended.decrypt(self.extended_vigenere_bytes,key)
-                                result="File generated successfully please proceed to download"
+                        if (key == "" or message == ""):
+                                        result = "Please enter a message and a key"
                         else:
-                                if (self.mode_normal == 0):
-                                        result=lib.ascii_to_string(vigenere_extended.encrypt(bytearray(lib.string_to_ascii_array(message)),key))
+                                if (self.isFile):
+                                        if (self.mode_normal == 0):
+                                                self.output_file=vigenere_extended.encrypt(self.extended_vigenere_bytes,key)
+                                        else:
+                                                self.output_file=vigenere_extended.decrypt(self.extended_vigenere_bytes,key)
+                                        result="File generated successfully please proceed to download"
                                 else:
-                                        result=lib.ascii_to_string(vigenere_extended.decrypt(bytearray(lib.string_to_ascii_array(message)),key))
+                                        if (self.mode_normal == 0):
+                                                result=lib.ascii_to_string(vigenere_extended.encrypt(bytearray(lib.string_to_ascii_array(message)),key))
+                                        else:
+                                                result=lib.ascii_to_string(vigenere_extended.decrypt(bytearray(lib.string_to_ascii_array(message)),key))
                 elif (self.kind==2):
                         if (len(self.key_input.text()) > len(self.text_input.text())):
                                 self.key_input.setText("Invalid Key")
                         else:
                                 message = self.text_input.text()
                                 key = self.key_input.text()
-                                if (self.mode_normal == 0):
-                                        result = playfair.encrypt(lib.remove_non_alphabet(message).upper(), lib.remove_non_alphabet(key).upper())
+                                if (key == "" or message == ""):
+                                        result = "Please enter a message and a key"
                                 else:
-                                        result = playfair.decrypt(lib.remove_non_alphabet(message).upper(),lib.remove_non_alphabet(key).upper())
+                                        if (self.mode_normal == 0):
+                                                result = playfair.encrypt(lib.remove_non_alphabet(message).upper(), lib.remove_non_alphabet(key).upper())
+                                        else:
+                                                result = playfair.decrypt(lib.remove_non_alphabet(message).upper(),lib.remove_non_alphabet(key).upper())
                 elif (self.kind==4):
                         if (len(self.key_input.text()) > len(self.text_input.text())):
                                 self.key_input.setText("Invalid Key")
@@ -1142,7 +1151,10 @@ class Ui_MainWindow(object):
                                         result = encrypted[0]
                                         self.key_input.setText(encrypted[1])
                                 else:
-                                        result = vigenere_standard.decrypt(lib.remove_non_alphabet(message).upper(),lib.remove_non_alphabet(key).upper())
+                                        if (key == "" or message == ""):
+                                                result = "Please enter a message and a key"
+                                        else:
+                                                result = vigenere_standard.decrypt(lib.remove_non_alphabet(message).upper(),lib.remove_non_alphabet(key).upper())
 
 
                 if ((self.print_type == 1) and  (self.kind != 1)):
